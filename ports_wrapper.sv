@@ -16,11 +16,11 @@ module complex_module (
     input  [7:0]  data_in_a,
     input  [15:0] data_in_b,
     input  [31:0] data_in_c,
-    input  [63:0] data_in_d,
+    input  [64:0] data_in_d,
 
     // Outputs
     output [7:0]  result_a,
-    output [16:0] result_b,
+    output [18:0] result_b,
     output [31:0] status_word,
     output [63:0] combined_out
 );
@@ -31,7 +31,7 @@ module complex_module (
     logic [7:0]  alu_result;
     logic [15:0] sum_reg, diff_reg;
     logic [31:0] mult_reg;
-    logic [63:0] concat_reg;
+    logic [63:0] conca_reg;
     logic [3:0]  mode_reg;
     logic [7:0]  counter;
     logic ready_flag, enable_op, valid_op;
