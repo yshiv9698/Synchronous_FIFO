@@ -8,9 +8,9 @@ module complex_module (
     input  rst_n,
 
     // Control signals
-    input  [3:0] mode_sel,
+    input  [4:0] mode_sel,
     input  [7:0] opcode,
-    input  [1:0] cfg_bits,
+    output  [1:0] cfg_bits,
 
     // Data inputs
     input  [7:0]  data_in_a,
@@ -20,7 +20,7 @@ module complex_module (
 
     // Outputs
     output [7:0]  result_a,
-    output [15:0] result_b,
+    output [16:0] result_b,
     output [31:0] status_word,
     output [63:0] combined_out
 );
